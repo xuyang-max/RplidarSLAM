@@ -1,0 +1,10 @@
+﻿生成启动时间为 2016/12/5 15:58:31。
+     1>项目“K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\RplidarSLAM\RplidarSLAM.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.exe" /INCREMENTAL /NOLOGO /LIBPATH:K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug opencv_ts300d.lib opencv_world300d.lib rplidar_driver.lib opencv_ts300d.lib opencv_world300d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.lib" /MACHINE:X86 Debug\main.obj
+         RplidarSLAM.vcxproj -> K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.exe
+     1>已完成生成项目“K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\RplidarSLAM\RplidarSLAM.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.86

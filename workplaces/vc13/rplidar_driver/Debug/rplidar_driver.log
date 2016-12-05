@@ -1,0 +1,13 @@
+﻿生成启动时间为 2016/12/5 15:34:28。
+     1>项目“K:\RplidarSLAM\workplaces\vc13\rplidar_driver\rplidar_driver.vcxproj”在节点 2 上(Build 个目标)。
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\rplidar_driver.lib" /NOLOGO Debug\net_serial.obj
+         Debug\timer.obj
+         Debug\thread.obj
+         Debug\rplidar_driver.obj
+         rplidar_driver.vcxproj -> K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\rplidar_driver.lib
+     1>已完成生成项目“K:\RplidarSLAM\workplaces\vc13\rplidar_driver\rplidar_driver.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.63
