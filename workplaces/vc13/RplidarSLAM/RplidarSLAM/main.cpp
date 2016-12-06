@@ -33,6 +33,11 @@
 #include <stdlib.h>
 
 #include "rplidar.h" //RPLIDAR standard sdk, all-in-one header
+#include "opencv_lidar.h"
+
+#include <iostream>  
+#include <cmath>  
+#include "io.h"
 
 #ifndef _countof
 #define _countof(_Array) (int)(sizeof(_Array) / sizeof(_Array[0]))
@@ -91,6 +96,11 @@ int main(int argc, const char * argv[]) {
 	// create the driver instance
 	RPlidarDriver * drv = RPlidarDriver::CreateDriver(RPlidarDriver::DRIVER_TYPE_SERIALPORT);
 
+	//creat opencv image
+	IplImage* RadarImage = cvCreateImage(cvSize(RadarImageWdith, RadarImageHeight), IPL_DEPTH_8U, 3);
+
+	LidarImage lidarImage;
+
 	if (!drv) {
 		fprintf(stderr, "insufficent memory, exit\n");
 		exit(-2);
@@ -116,6 +126,9 @@ int main(int argc, const char * argv[]) {
 	drv->startScan();
 
 	// fetech result and print it out...
+	char key;
+	cvNamedWindow("Radar", 1);
+
 	while (1) {
 		rplidar_response_measurement_node_t nodes[360 * 2];
 		size_t   count = _countof(nodes);
@@ -123,18 +136,22 @@ int main(int argc, const char * argv[]) {
 		op_result = drv->grabScanData(nodes, count);
 
 		if (IS_OK(op_result)) {
-			drv->ascendScanData(nodes, count);
-			for (int pos = 0; pos < (int)count; ++pos) {
-				printf("%s theta: %03.2f Dist: %08.2f Q: %d \n",
-					(nodes[pos].sync_quality & RPLIDAR_RESP_MEASUREMENT_SYNCBIT) ? "S " : "  ",
-					(nodes[pos].angle_q6_checkbit >> RPLIDAR_RESP_MEASUREMENT_ANGLE_SHIFT) / 64.0f,
-					nodes[pos].distance_q2 / 4.0f,
-					nodes[pos].sync_quality >> RPLIDAR_RESP_MEASUREMENT_QUALITY_SHIFT);
-			}
+			float frequency = 0;
+			drv->getFrequency(nodes, count, frequency);
+			lidarImage.scanData(nodes, count, frequency);
+			lidarImage.draw(RadarImage);
+			
+			cvShowImage("Radar", RadarImage);
+			key = cvWaitKey(30);
+			if (key == 27)//escÍË³ö  
+			{
+				break;
+			}		
 		}
-
 	}
 
+	cvReleaseImage(&RadarImage);
+	cvDestroyWindow("Radar");
 	// done!
 on_finished:
 	RPlidarDriver::DisposeDriver(drv);

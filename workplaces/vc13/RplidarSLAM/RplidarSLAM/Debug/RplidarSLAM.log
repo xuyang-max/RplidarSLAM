@@ -1,10 +1,20 @@
-﻿生成启动时间为 2016/12/5 15:58:31。
+﻿生成启动时间为 2016/12/6 18:51:57。
      1>项目“K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\RplidarSLAM\RplidarSLAM.vcxproj”在节点 2 上(Build 个目标)。
-     1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.exe" /INCREMENTAL /NOLOGO /LIBPATH:K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug opencv_ts300d.lib opencv_world300d.lib rplidar_driver.lib opencv_ts300d.lib opencv_world300d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.lib" /MACHINE:X86 Debug\main.obj
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ID:\opencv\build\include\opencv2 /ID:\opencv\build\include\opencv /ID:\opencv\build\include /IK:\RplidarSLAM\workplaces\vc13\RplidarSLAM\RplidarSLAM\include /IK:\RplidarSLAM\sdk\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\opencv_lidar.cpp
+         opencv_lidar.cpp
+     1>d:\opencv\build\include\opencv2\core\mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>k:\rplidarslam\sdk\include\rplidar_protocol.h(62): warning C4200: 使用了非标准扩展 : 结构/联合中的零大小数组
+                 当 UDT 包含大小为零的数组时，无法生成复制构造函数或副本赋值运算符
+     1>k:\rplidarslam\workplaces\vc13\rplidarslam\rplidarslam\src\opencv_lidar.cpp(45): warning C4018: “<”: 有符号/无符号不匹配
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.exe" /INCREMENTAL /NOLOGO /LIBPATH:D:\opencv\build\x86\vc12\lib /LIBPATH:K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug opencv_ts300d.lib opencv_world300d.lib rplidar_driver.lib opencv_ts300d.lib opencv_world300d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.lib" /MACHINE:X86 Debug\main.obj
+         Debug\opencv_lidar.obj
          RplidarSLAM.vcxproj -> K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\Debug\RplidarSLAM.exe
      1>已完成生成项目“K:\RplidarSLAM\workplaces\vc13\RplidarSLAM\RplidarSLAM\RplidarSLAM.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:00.86
+已用时间 00:00:01.14
